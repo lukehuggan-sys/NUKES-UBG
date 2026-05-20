@@ -202,5 +202,5 @@ gameCards.forEach(card => {
 });
 
 // Console message for fun
-console.log('%cWelcome to Unblocked Games! 🎮', 'color: #ff6b6b; font-size: 20px; font-weight: bold;');
+console.log('%cWelcome to NUKES UBG! 🎮', 'color: #ff6b6b; font-size: 20px; font-weight: bold;');
 console.log('%cHave fun playing! 🔥', 'color: #ffa500; font-size: 16px;');
