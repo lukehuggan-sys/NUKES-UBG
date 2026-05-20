@@ -210,6 +210,7 @@ header {
 .game-card:nth-child(15) { animation-delay: 1.5s; }
 .game-card:nth-child(16) { animation-delay: 1.6s; }
 .game-card:nth-child(17) { animation-delay: 1.7s; }
+.game-card:nth-child(18) { animation-delay: 1.8s; }
 
 .card-content {
     padding: 30px 20px;
