@@ -1,3 +1,47 @@
+// Initialize Spark Background
+function initializeSparks() {
+    const sparkContainer = document.querySelector('.spark-container');
+    const sparkCount = 50;
+    
+    for (let i = 0; i < sparkCount; i++) {
+        createSpark(sparkContainer);
+    }
+    
+    // Create new sparks periodically
+    setInterval(() => {
+        if (sparkContainer.children.length < sparkCount) {
+            createSpark(sparkContainer);
+        }
+    }, 500);
+}
+
+function createSpark(container) {
+    const spark = document.createElement('div');
+    spark.className = 'spark';
+    
+    // Random position
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+    
+    spark.style.left = x + 'px';
+    spark.style.top = y + 'px';
+    
+    // Random animation duration
+    const duration = Math.random() * 3 + 2;
+    spark.style.animationDuration = duration + 's';
+    spark.style.animationDelay = Math.random() * 2 + 's';
+    
+    container.appendChild(spark);
+    
+    // Remove spark after animation
+    setTimeout(() => {
+        spark.remove();
+    }, (duration + 2) * 1000);
+}
+
+// Initialize sparks on load
+window.addEventListener('DOMContentLoaded', initializeSparks);
+
 // Click Effect - Create particles on click
 document.addEventListener('click', (e) => {
     createParticles(e.clientX, e.clientY);
